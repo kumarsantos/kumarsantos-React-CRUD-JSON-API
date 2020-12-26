@@ -1,3 +1,224 @@
+to create one fake json api
+
+<!-- create db or any name of file .json  and add content in below format-->
+{
+  <!-- "users": [
+    {
+      "name": "SANTOSH KUMAR SAHa",
+      "username": "admin",
+      "email": "Ramanandsah20@gmail.com",
+      "phone": "09844010478",
+      "website": "hildegard.org",
+      "id": 1
+    },
+    {
+      "name": "SANTOSH KUMAR SAH",
+      "username": "admin",
+      "email": "Ramanandsah20@gmail.com",
+      "phone": "09844010478",
+      "website": "hildegard.org",
+      "id": 2
+    }
+  ]
+} -->
+
+<!-- install json-server -->
+npm i json-server
+<!-- add following line in script section in package.json  this line is setup the json server in port number specified -->
+"json-server":"json-server --watch db.json --port 3003",
+
+<!-- start json server by following command -->
+npm start --watch json-server
+
+<!-- install bootstrap -->
+$ npm i bootstrap  
+<!-- import bootstrap -->
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

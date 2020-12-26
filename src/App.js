@@ -1,40 +1,34 @@
-import React, { useState } from "react";
-import ExpenceList from "./Componets/ExpenceList";
-import ExpenceForms from "./Componets/ExpenceForms";
-import alert from "./Componets/alert";
+import React from "react";
 import "./App.css";
-import uuid from "uuid/v4";
-
-const initialExpeneces = [
-  { id: uuid(), charge: "rent", amount: 16000 },
-  { id: uuid(), charge: "car payment", amount: 400 },
-  { id: uuid(), charge: "credit card bill", amount: 1200 }
-];
-console.log(initialExpeneces);
-
-function App() {
-  const [expenecs, setExpences] = useState(initialExpeneces);
-  console.log(expenecs);
-
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Navbar from "./components/layout/Navbar";
+import {Route,Switch} from "react-router-dom";
+import NotFound from "./components/pages/NotFound";
+import Adduser from './components/users/Adduser';   
+import Edituser from "./components/users/Edituser"; 
+import Userview from "./components/users/Userview";
+export const App = () => {
   return (
     <div className="App">
-      <alert />
-      <h1>Budget Calculator</h1>
-      <main className="App">
-        <ExpenceForms />
-        <ExpenceList expenecs={expenecs} />
-      </main>
-      <h1>
-        total spending:{" "}
-        <span className="total">
-          ${" "}
-          {expenecs.reduce((acc, curr) => {
-            return (acc += curr.amount);
-          }, 0)}
-        </span>
-      </h1>
+
+      <Navbar />
+      <Switch>
+
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/users/add" component={Adduser} />
+        <Route exact path="/user/edit/:id" component={Edituser} />
+        <Route exact path="/user/view/:id" component={Userview} />
+        <Route component={NotFound} />
+
+      </Switch>
+      
     </div>
   );
-}
+};
 
 export default App;
